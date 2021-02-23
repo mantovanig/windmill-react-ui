@@ -10,7 +10,7 @@
     "README.md"
   ],
   "scripts": {
-    "prebuild": "rimraf dist lib && npm run build:lib && npm run build:ts",
+    "prebuild": "rimraf dist lib && npm run build:lib && npm run build:ts && npm run build:tailwind",
     "build:ts": "tsc --declaration --declarationMap --emitDeclarationOnly",
     "build:tailwind": "tailwindcss build style/tailwind.css -o style/output.css -c style/tailwind.config.js",
     "build:lib": "babel src/themes/default.ts --out-file lib/defaultTheme.js",
